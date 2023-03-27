@@ -1,13 +1,8 @@
 import { useMemo } from 'react'
 import { useInfiniteQuery } from '@tanstack/react-query'
+import { fetchData } from '../services/fetchData'
 
 export const useCharacter = () => {
-  const fetchData = (page) => {
-    const RICKANDMORTY_API_URL = 'https://rickandmortyapi.com/api/character/'
-    const promise = fetch(`${RICKANDMORTY_API_URL}?page=${page}`).then((res) => res.json())
-    return promise
-  }
-
   const { data, error, fetchNextPage, status, hasNextPage } = useInfiniteQuery(
     ['characters'],
     ({ pageParam = 1 }) => fetchData(pageParam),
