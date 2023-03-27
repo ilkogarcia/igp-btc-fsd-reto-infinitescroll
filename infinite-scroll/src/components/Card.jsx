@@ -1,10 +1,19 @@
+// Import libraries
+import React from 'react'
+import { PropTypes } from 'prop-types'
+
 export const Card = ({ character }) => {
-    return (
+  const { image, name } = character
+  return (
         <div className='card'>
-            <img src={character.image} alt={character.name} width={50} loading='lazy' />
-            <p>{character.name}</p>
+            <img src={image} alt={name} width={50} loading='lazy' />
+            <p>{name}</p>
         </div>
-    )
+  )
+}
+
+Card.propTypes = {
+  character: PropTypes.object
 }
 
 export default Card
