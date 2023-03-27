@@ -40,7 +40,7 @@ body {
   animation: fadeInMove 1s ease;
 }
 
-.card>img {
+.card img {
   width: 150px;
   min-height: 150px;
   height: 100%;
@@ -48,7 +48,7 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-.card>p {
+.card p {
   flex: 1;
   text-align: center;
   font-weight: bold;
